@@ -1,0 +1,169 @@
+/* RESET */
+@font-face {
+    src: url("../fonts/TaxiDriver.ttf");
+    font-family: "Taxi Driver";
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    font-size: 16px;
+    transition: all 0.4s ease-out;
+}
+.max-header {
+    background-color: #2574A9;
+    height: 100px;
+}
+.min-header {
+    background-color: #C5EFF7;
+    height: 80px;
+}
+.container {
+    display: grid;
+    grid-template-areas: "lgo ... nav";
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.logo {
+    grid-area: lgo;
+}
+.logo img {
+    transition: all 0.4s ease-out;
+}
+.max-logo img {
+    width: 320px;
+}
+.min-logo img {
+    width: 280px;
+}
+.nav-bar {
+    display: grid;
+    align-content: center;
+    grid-area: nav;
+}
+.nav-bar ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
+.nav-bar a {
+    font-family: "Taxi Driver";
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
+}
+.max-nav a {
+    font-size: 1em;
+    color: #C5EFF7;
+}
+.min-nav a {
+    font-size: 0.875em;
+    color: #2574A9;
+}
+.ghost {
+    width: 100%;
+    height: 100px;
+    background-color: #B7D5Eb;
+}
+@media (max-width: 768px){
+    .container {
+        grid-template-areas: "lgo ... mnu";
+        padding: 0 20px;
+        position: relative;
+    }
+    .max-logo img {
+        width: 220px;
+    }
+    .min-logo img {
+        width: 180px;
+    }
+    .max-header {
+        height: 80px;
+    }
+    .min-header {
+        height: 60px;
+    }
+    .ghost {
+        height: 80px;
+    }
+    .menu {
+        align-content: center;
+        display: grid;
+        grid-area: mnu;
+    }
+    .hambuguer {
+        width: 28px;
+        height: 3px;
+        background-color: #C5EFF7;
+        position: relative;
+    }
+    .hambuguer::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #C5EFF7;
+        position: absolute;
+        top: -8px;
+        left: 0;
+    }
+    .hambuguer::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #C5EFF7;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+    .nav-bar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #2980B9;
+    }
+    .nav-bar ul {
+        grid-auto-flow: row;
+        grid-gap: 80px;
+        justify-content: center;
+    }
+    .nav-bar li {
+        text-align: center;
+    }
+    
+}
+
+main {
+    font-size: 30px;
+}
+main section {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: "Taxi Driver";
+    font-size: 1em;
+    color: #2574A9;
+}
+main section:nth-child(even) {
+    height: 100vh;
+    background-color: #CAE1F1;
+}
+main section:nth-child(odd) {
+    height: 100vh;
+    background-color: #B7D5Eb;
+}

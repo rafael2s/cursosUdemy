@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+header {
+    font-size: 20px;
+}
+
+.logo {
+    align-content: center;
+    background-color: #F8EFBA;
+    display: grid;
+    height: 160px;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 540px;
+}
+
+.nav-bar {
+    align-content: center;
+    background-color: #6AB04C;
+    display: grid;
+    height: 40px;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-bar ul {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.nav-bar li {
+    align-content: center;
+    display: grid;
+    height: 40px;
+    justify-content: center;
+    width: 160px;
+}
+
+.nav-bar a {
+    color: #F8EFBA;
+    font-family: 'Rancho', cursive;
+    font-size: 1em;
+}
+
+main {
+    font-size: 20px;
+}
+
+main section {
+    align-content: center;
+    color: #6AB04C;
+    display: grid;
+    font-family: 'Rancho', cursive;
+    font-size: 2em;
+    justify-content: center;
+}
+
+main section:nth-child(odd) {
+    height: 100vh;
+    background-color: #F0F0D6;
+}
+
+main section:nth-child(even) {
+    height: 100vh;
+    background-color: #F8EFBA;
+}
