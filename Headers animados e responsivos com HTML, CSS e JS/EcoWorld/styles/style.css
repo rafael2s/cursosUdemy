@@ -12,6 +12,7 @@ a {
 
 header {
     font-size: 20px;
+    position: relative;
 }
 
 .logo {
@@ -43,16 +44,32 @@ header {
 
 .nav-bar li {
     align-content: center;
+    color: #F8EFBA;
+    cursor: pointer;
     display: grid;
+    font-family: 'Rancho', cursive;
+    font-size: 1em;
     height: 40px;
     justify-content: center;
     width: 160px;
 }
 
-.nav-bar a {
-    color: #F8EFBA;
-    font-family: 'Rancho', cursive;
-    font-size: 1em;
+.abs-pos {
+    position: absolute;
+    top: 160px;
+    right: 0;
+}
+
+.fix-pos {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.ghost {
+    width: 100%;
+    height: 40px;
+    background-color: #F0F0D6;
 }
 
 main {
