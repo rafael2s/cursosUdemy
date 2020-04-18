@@ -42,14 +42,17 @@ header {
 .logo {
     grid-area: lgo;
 }
-.logo img {
+.logo svg {
+    fill-opacity: 0;
     transition: all 0.4s ease-out;
 }
-.max-logo img {
+.max-logo svg {
     width: 320px;
+    fill: #C5EFF7;
 }
-.min-logo img {
+.min-logo svg {
     width: 280px;
+    fill: #2574A9;
 }
 .nav-bar {
     display: grid;
@@ -118,10 +121,10 @@ header {
         padding: 0 20px;
         position: relative;
     }
-    .max-logo img {
+    .max-logo svg {
         width: 220px;
     }
-    .min-logo img {
+    .min-logo svg {
         width: 180px;
     }
     .max-header {
